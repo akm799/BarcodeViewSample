@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">BarcodeViewSample</string>
+
+    <string name="main_demo_options_desc">Choose \'Fixed Dimensions\' for a barcode view demonstration with fixed width and height or \'Free Dimensions\' for a barcode view with free width and height values (wrap_content).</string>
+
+    <string name="barcode_text_hint">Please type the barcode text</string>
+    <string name="show_barcode_action">Show Barcode</string>
+
+    <string name="fixed_dimensions_title">Fixed Dimensions</string>
+
+    <string name="free_dimensions_title">Free Dimensions</string>
+    <string name="free_dimensions_module_width_desc">Module width: </string>
+    <string name="free_dimensions_module_width_units"> dip</string>
+    <string name="free_dimensions_width_over_height_ratio_desc">Width over height ratio: </string>
+</resources>

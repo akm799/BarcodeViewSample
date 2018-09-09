@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <dimen name="main_description_margin_vertical">32dp</dimen>
+    <dimen name="main_description_margin_horizontal">16dp</dimen>
+    <dimen name="main_button_margin_vertical">80dp</dimen>
+
+    <dimen name="fixed_dimensions_barcode_width">300dp</dimen>
+    <dimen name="fixed_dimensions_barcode_height">50dp</dimen>
+    <dimen name="fixed_dimensions_barcode_text_margin_vertical">4dp</dimen>
+
+    <dimen name="free_dimensions_controls_text_margin_horizontal">2dp</dimen>
+    <dimen name="free_dimensions_controls_margin_vertical">16dp</dimen>
+
+    <integer name="text_input_weight">20</integer>
+    <integer name="barcode_views_weight">80</integer>
+</resources>

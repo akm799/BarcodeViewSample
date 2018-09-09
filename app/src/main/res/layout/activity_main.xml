@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginLeft="@dimen/main_description_margin_horizontal"
+        android:layout_marginRight="@dimen/main_description_margin_horizontal"
+        android:layout_marginTop="@dimen/main_description_margin_vertical"
+        android:gravity="left"
+        android:text="@string/main_demo_options_desc"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="@dimen/main_button_margin_vertical"
+        android:text="@string/fixed_dimensions_title"
+        android:onClick="onFixedDimensions"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="@dimen/main_button_margin_vertical"
+        android:text="@string/free_dimensions_title"
+        android:onClick="onFreeDimensions"/>
+</LinearLayout>

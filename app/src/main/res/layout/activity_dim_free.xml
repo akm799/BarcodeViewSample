@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".FreeDimensionsActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="@integer/text_input_weight"
+        android:orientation="vertical">
+
+        <EditText
+            android:id="@+id/barcodeTextInput"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:imeOptions="actionDone"
+            android:hint="@string/barcode_text_hint"/>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left"
+            android:text="@string/show_barcode_action"
+            android:onClick="onShow"/>
+    </LinearLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="@integer/barcode_views_weight">
+
+        <LinearLayout
+            android:id="@+id/dimControls"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="top"
+            android:orientation="vertical"
+            android:visibility="invisible">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="@dimen/free_dimensions_controls_text_margin_horizontal"
+                    android:text="@string/free_dimensions_module_width_desc"/>
+
+                <Spinner
+                    android:id="@+id/barcodeModuleWidth"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/free_dimensions_module_width_units"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="16dp"
+                android:layout_marginTop="@dimen/free_dimensions_controls_margin_vertical"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="@dimen/free_dimensions_controls_text_margin_horizontal"
+                        android:text="@string/free_dimensions_width_over_height_ratio_desc"/>
+
+                    <TextView
+                        android:id="@+id/barcodeWidthOverHeightRatioTxt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="6.00"/>
+                </LinearLayout>
+
+                <SeekBar
+                    android:id="@+id/barcodeWidthOverHeightRatio"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:progress="59"/>
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <uk.co.akm.util.barcode.lib.barcodeviewlib.view.BarcodeView
+            android:id="@+id/barcodeView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"/>
+    </FrameLayout>
+
+</LinearLayout>

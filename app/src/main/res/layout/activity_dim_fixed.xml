@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".FixedDimensionsActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="@integer/text_input_weight"
+        android:orientation="vertical">
+
+        <EditText
+            android:id="@+id/barcodeTextInput"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:imeOptions="actionDone"
+            android:hint="@string/barcode_text_hint"/>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left"
+            android:text="@string/show_barcode_action"
+            android:onClick="onShow"/>
+    </LinearLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="@integer/barcode_views_weight">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:orientation="vertical">
+
+            <uk.co.akm.util.barcode.lib.barcodeviewlib.view.BarcodeView
+                android:id="@+id/barcodeView"
+                android:layout_width="@dimen/fixed_dimensions_barcode_width"
+                android:layout_height="@dimen/fixed_dimensions_barcode_height"
+                android:layout_gravity="center_horizontal"
+                custom:barColour="@color/barcodeBlue"/>
+
+            <TextView
+                android:id="@+id/barcodeViewText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="@dimen/fixed_dimensions_barcode_text_margin_vertical"/>
+        </LinearLayout>
+    </FrameLayout>
+
+</LinearLayout>
